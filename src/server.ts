@@ -8,9 +8,9 @@ dotEnv.config();
     const port = process.env.PORT;
 
     const app = await buildApp();
-    await app.listen({ port: Number() });
+    await app.listen({ port: Number(port), host: '0.0.0.0' });
 
-    console.log('server running in port 8080');
+    console.log(`server running in port ${port}`);
   } catch (err) {
     console.log('Server startup failed');
   }
