@@ -2,6 +2,5 @@ import { FastifyInstance } from 'fastify'; //contains the methods and properties
 import { emailController } from '@/controller/email.controller';
 
 export async function emailRoute(app: FastifyInstance) {
-  console.log('in email routes the call has happened');
   app.post('/email', emailController);
 }
