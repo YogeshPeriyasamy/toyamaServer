@@ -17,10 +17,12 @@
     "@fastify/multipart": "^9.3.0",
     "dotenv": "^17.2.3",
     "fastify": "^5.6.2",
+    "nodemailer": "^7.0.11",
     "pino": "^10.1.0",
     "zod": "^4.1.13"
   },
   "devDependencies": {
+    "@types/nodemailer": "^7.0.4",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
