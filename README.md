@@ -56,6 +56,12 @@ npm run build
       └─ email.validation.ts
 ```
 
+## System-Level Configuration
+
+- Postfix must be installed and configured for sending emails. Refer to the [official Postfix documentation](https://www.postfix.org/documentation.html) for setup instructions.
+- Docker must be installed to run Mailpit for email testing. Mailpit can be started with: docker (run -d -p 1025:1025 -p 8025:8025 mailpit/mailpit)
+- Access the Mailpit web interface at `http://localhost:8025`.
+
 ## Aliases
 
 - `@/*` resolves to `src/*` (see `tsconfig.json`).
