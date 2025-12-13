@@ -42,7 +42,7 @@ export async function handleEmail(payload: emailType): Promise<sendResultType> {
 
   return sendEmail({
     from: process.env.MAIL_FROM || 'Toyama <no-reply@toyama.local>',
-    to: process.env.MAIL_TO || 'third-eye@toyama.local',
+    to: process.env.MAIL_TO!,
     subject,
     html,
     text,

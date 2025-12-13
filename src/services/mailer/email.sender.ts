@@ -14,12 +14,12 @@ async function getTransporter(): Promise<
   transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
-    secure: false,
+    secure: true,
     auth:
-      process.env.SMTP_USER && process.env.SMTP_PASS
+      process.env.USER_GMAIL && process.env.GMAIL_PASS
         ? {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
+            user: process.env.USER_GMAIL,
+            pass: process.env.GMAIL_PASS,
           }
         : undefined,
     tls: { rejectUnauthorized: false },
