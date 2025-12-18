@@ -8,7 +8,7 @@ dotEnv.config();
     const port = process.env.PORT;
 
     const app = await buildApp();
-    await app.listen({ port: Number(port), host: '0.0.0.0' });
+    await app.listen({ port: Number(port), host: '127.0.0.1' });
 
     console.log(`server running in port ${port}`);
   } catch (err) {
