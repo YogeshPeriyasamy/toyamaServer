@@ -16,7 +16,6 @@ export async function emailController(req: FastifyRequest, res: FastifyReply) {
     }
   }
 
-  console.log('fields:', fields);
   const parsedFields = emailBodySchema.safeParse(fields);
 
   //edgecase the form data is invalid
@@ -27,8 +26,6 @@ export async function emailController(req: FastifyRequest, res: FastifyReply) {
 
   //fetch the validated data from zod
   const payload = parsedFields.data;
-
-  console.log('checkng payload in email controller', payload);
 
   try {
     await handleEmail(payload);

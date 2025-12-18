@@ -35,11 +35,11 @@ export async function sendEmail(mail: {
   html: string;
   text?: string;
 }): Promise<sendResultType> {
-  console.log('reached send email function', mail);
+  
   try {
     const transporter = await getTransporter();
     const info = await transporter.sendMail(mail);
-    console.log('info has been sent', info);
+   
     return {
       messageId: info.messageId || '',
       accepted: info.accepted as string[],
